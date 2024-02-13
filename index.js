@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const { connectToDB, loadEnv } = require("./src/utils");
-const { errorHandler } = require("./src/middlewares/errorMiddleware");
+const { errorHandler } = require("./src/middlewares/error.middlewares");
 const { auth, health } = require("./src/routes");
 const { warn, log } = require("logggger");
 
