@@ -108,7 +108,7 @@ const loginUser = asyncHandler(async (req, res) => {
  * @name resetPassword
  * @param {object} req
  * @param {object} res
- * @description Register user
+ * @description Reset password
  * @route {POST} /api/v1/auth/reset
  * @access public
  */
