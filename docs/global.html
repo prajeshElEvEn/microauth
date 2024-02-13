@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="styles/prettify-tomorrow.css"
+    />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <h1 class="page-title">Global</h1>
+
+      <section>
+        <header>
+          <h2></h2>
+        </header>
+
+        <article>
+          <div class="container-overview">
+            <dl class="details"></dl>
+          </div>
+
+          <h3 class="subsection-title">Methods</h3>
+
+          <h4 class="name" id="confirmResetPassword">
+            <span class="type-signature">(async) </span
+            >confirmResetPassword<span class="signature">(req, res)</span
+            ><span class="type-signature"> &rarr; {void}</span>
+          </h4>
+
+          <div class="description">
+            <p>This function confirms the reset of a user's password.</p>
+          </div>
+
+          <h5>Parameters:</h5>
+
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Type</th>
+
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name"><code>req</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"><p>Express request object.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>res</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last">
+                  <p>Express response object.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.params.token</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last">
+                  <p>Token from the reset email.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.newPassword</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last">
+                  <p>New password for the user.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="auth.controllers.js.html">auth.controllers.js</a>,
+                  <a href="auth.controllers.js.html#line217">line 217</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5>Throws:</h5>
+
+          <dl>
+            <dt>
+              <div class="param-desc">
+                <p>
+                  Will throw an error if required fields are not provided, if
+                  the token is invalid or expired, or if password reset fails.
+                </p>
+              </div>
+            </dt>
+            <dd></dd>
+            <dt>
+              <dl>
+                <dt>Type</dt>
+                <dd>
+                  <span class="param-type">Error</span>
+                </dd>
+              </dl>
+            </dt>
+            <dd></dd>
+          </dl>
+
+          <h5>Returns:</h5>
+
+          <dl>
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">void</span>
+            </dd>
+          </dl>
+
+          <h5>Example</h5>
+
+          <pre class="prettyprint"><code>// Example usage in an Express route:
+app.post('/api/v1/auth/reset/:token', confirmResetPassword);</code></pre>
+
+          <h4 class="name" id="loginUser">
+            <span class="type-signature">(async) </span>loginUser<span
+              class="signature"
+              >(req, res)</span
+            ><span class="type-signature"> &rarr; {void}</span>
+          </h4>
+
+          <div class="description">
+            <p>This function handles user login.</p>
+          </div>
+
+          <h5>Parameters:</h5>
+
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Type</th>
+
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name"><code>req</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"><p>Express request object.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>res</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last">
+                  <p>Express response object.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.email</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last">
+                  <p>Email address of the user.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.password</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last"><p>User's password.</p></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="auth.controllers.js.html">auth.controllers.js</a>,
+                  <a href="auth.controllers.js.html#line88">line 88</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5>Throws:</h5>
+
+          <dl>
+            <dt>
+              <div class="param-desc">
+                <p>
+                  Will throw an error if required fields are not provided, if
+                  the user does not exist, if credentials are invalid, or if
+                  token generation fails.
+                </p>
+              </div>
+            </dt>
+            <dd></dd>
+            <dt>
+              <dl>
+                <dt>Type</dt>
+                <dd>
+                  <span class="param-type">Error</span>
+                </dd>
+              </dl>
+            </dt>
+            <dd></dd>
+          </dl>
+
+          <h5>Returns:</h5>
+
+          <dl>
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">void</span>
+            </dd>
+          </dl>
+
+          <h5>Example</h5>
+
+          <pre class="prettyprint"><code>// Example usage in an Express route:
+app.post('/api/v1/auth/login', loginUser);</code></pre>
+
+          <h4 class="name" id="onConnect">
+            <span class="type-signature">(async) </span>onConnect<span
+              class="signature"
+              >(req, res)</span
+            ><span class="type-signature"></span>
+          </h4>
+
+          <div class="description">
+            <p>checks if server is up</p>
+          </div>
+
+          <h5>Parameters:</h5>
+
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Type</th>
+
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name"><code>req</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>res</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="health.controllers.js.html">health.controllers.js</a
+                  >, <a href="health.controllers.js.html#line3">line 3</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h4 class="name" id="registerUser">
+            <span class="type-signature">(async) </span>registerUser<span
+              class="signature"
+              >(req, res)</span
+            ><span class="type-signature"> &rarr; {void}</span>
+          </h4>
+
+          <div class="description">
+            <p>This function handles the registration of a new user.</p>
+          </div>
+
+          <h5>Parameters:</h5>
+
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Type</th>
+
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name"><code>req</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"><p>Express request object.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>res</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last">
+                  <p>Express response object.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.firstName</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last"><p>First name of the user.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.lastName</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last"><p>Last name of the user.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.email</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last">
+                  <p>Email address of the user.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.password</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last"><p>User's password.</p></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="auth.controllers.js.html">auth.controllers.js</a>,
+                  <a href="auth.controllers.js.html#line11">line 11</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5>Throws:</h5>
+
+          <dl>
+            <dt>
+              <div class="param-desc">
+                <p>
+                  Will throw an error if required fields are not provided, if
+                  the user already exists, or if registration fails.
+                </p>
+              </div>
+            </dt>
+            <dd></dd>
+            <dt>
+              <dl>
+                <dt>Type</dt>
+                <dd>
+                  <span class="param-type">Error</span>
+                </dd>
+              </dl>
+            </dt>
+            <dd></dd>
+          </dl>
+
+          <h5>Returns:</h5>
+
+          <dl>
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">void</span>
+            </dd>
+          </dl>
+
+          <h5>Example</h5>
+
+          <pre class="prettyprint"><code>// Example usage in an Express route:
+app.post('/api/v1/auth/register', registerUser);</code></pre>
+
+          <h4 class="name" id="resetPassword">
+            <span class="type-signature">(async) </span>resetPassword<span
+              class="signature"
+              >(req, res)</span
+            ><span class="type-signature"> &rarr; {void}</span>
+          </h4>
+
+          <div class="description">
+            <p>This function handles the reset of a user's password.</p>
+          </div>
+
+          <h5>Parameters:</h5>
+
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Type</th>
+
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name"><code>req</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last"><p>Express request object.</p></td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>res</code></td>
+
+                <td class="type">
+                  <span class="param-type">object</span>
+                </td>
+
+                <td class="description last">
+                  <p>Express response object.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name"><code>req.body.email</code></td>
+
+                <td class="type">
+                  <span class="param-type">string</span>
+                </td>
+
+                <td class="description last">
+                  <p>Email address of the user.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="auth.controllers.js.html">auth.controllers.js</a>,
+                  <a href="auth.controllers.js.html#line157">line 157</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+
+          <h5>Throws:</h5>
+
+          <dl>
+            <dt>
+              <div class="param-desc">
+                <p>
+                  Will throw an error if the required field is not provided or
+                  if the user is not found.
+                </p>
+              </div>
+            </dt>
+            <dd></dd>
+            <dt>
+              <dl>
+                <dt>Type</dt>
+                <dd>
+                  <span class="param-type">Error</span>
+                </dd>
+              </dl>
+            </dt>
+            <dd></dd>
+          </dl>
+
+          <h5>Returns:</h5>
+
+          <dl>
+            <dt>Type</dt>
+            <dd>
+              <span class="param-type">void</span>
+            </dd>
+          </dl>
+
+          <h5>Example</h5>
+
+          <pre class="prettyprint"><code>// Example usage in an Express route:
+app.post('/api/v1/auth/reset', resetPassword);</code></pre>
+        </article>
+      </section>
+    </div>
+
+    <nav>
+      <h2><a href="index.html">Home</a></h2>
+      <h3>Global</h3>
+      <ul>
+        <li>
+          <a href="global.html#confirmResetPassword">confirmResetPassword</a>
+        </li>
+        <li><a href="global.html#loginUser">loginUser</a></li>
+        <li><a href="global.html#onConnect">onConnect</a></li>
+        <li><a href="global.html#registerUser">registerUser</a></li>
+        <li><a href="global.html#resetPassword">resetPassword</a></li>
+      </ul>
+    </nav>
+
+    <br class="clear" />
+
+    <footer>
+      Documentation generated by
+      <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Feb 13
+      2024 22:24:32 GMT+0530 (India Standard Time)
+    </footer>
+
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/linenumber.js"></script>
+  </body>
+</html>
