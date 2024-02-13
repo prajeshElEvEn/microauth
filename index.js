@@ -14,7 +14,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use("/uploads", express.static(constants.paths.uploadDir));
 
 app.use("/api/v1/health", health);
 app.use("/api/v1/auth", auth);
