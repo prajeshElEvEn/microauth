@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "docs": "jsdoc -c jsdoc.config.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "dotenv": "^16.4.3",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
+    "jsdoc": "^4.0.2",
     "jsonwebtoken": "^9.0.2",
     "logggger": "^1.0.0",
     "mongoose": "^8.1.2",
