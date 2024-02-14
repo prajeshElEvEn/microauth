@@ -1,6 +1,19 @@
 const dotenv = require("dotenv");
 const { error } = require("logggger");
 
+/**
+ * Loads environment variables based on the current Node.js environment.
+ *
+ * @function
+ * @name loadEnv
+ * @returns {string} The current Node.js environment ("production", "development", or "test").
+ * @throws {Error} Throws an error if an invalid environment is detected.
+ *
+ * @example
+ * // Example usage:
+ * const currentEnvironment = loadEnv();
+ * console.log(`Current environment: ${currentEnvironment}`);
+ */
 const loadEnv = () => {
   dotenv.config({ path: ".env" });
   const env = process.env.NODE_ENV;

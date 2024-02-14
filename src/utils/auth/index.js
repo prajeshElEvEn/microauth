@@ -27,17 +27,37 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+/**
+ * Generates a JSON Web Token (JWT) for the given user ID.
+ *
+ * @param {string} id - User ID.
+ * @returns {string} The generated JWT.
+ */
 const generateToken = (id) => {
   return jwt.sign({ id }, SECRET, {
     expiresIn: EXPIRY,
   });
 };
 
+/**
+ * Generates a random reset token using crypto.
+ *
+ * @returns {string} The generated reset token.
+ */
 const generateResetToken = () => {
   const token = crypto.randomBytes(20).toString("hex");
   return token;
 };
 
+/**
+ * Sends a password reset email to the provided email address.
+ *
+ * @async
+ * @param {string} email - The email address to which the reset email will be sent.
+ * @param {string} resetToken - The reset token to include in the email.
+ * @returns {Promise<{ message: string }>} A Promise that resolves with a success message if the email is sent.
+ * @throws {Error} Throws an error if the email could not be sent.
+ */
 const sendResetEmail = async (email, resetToken) => {
   const mailOptions = {
     from: {
@@ -53,11 +73,18 @@ const sendResetEmail = async (email, resetToken) => {
     await transporter.sendMail(mailOptions);
     return { message: "email sent" };
   } catch (err) {
-    console.log(err);
+    console.error(err);
     throw new Error("email could not be sent");
   }
 };
 
+/**
+ * Validates a reset token against a user's stored reset token and expiration date.
+ *
+ * @param {string} token - The reset token to validate.
+ * @param {object} user - The user object containing resetPasswordToken and resetPasswordExpires properties.
+ * @returns {boolean} Returns true if the token is valid; otherwise, returns false.
+ */
 const validateResetToken = (token, user) => {
   return (
     token === user.resetPasswordToken && user.resetPasswordExpires > Date.now()

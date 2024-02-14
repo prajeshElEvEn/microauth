@@ -1,0 +1,22 @@
+---
+custom_edit_url: null
+---
+
+```ts
+function validateResetToken(token: string, user: object)
+```
+
+<div>
+
+</div>
+
+<p>Validates a reset token against a user's stored reset token and expiration date.</p>
+
+**Returns**: boolean
+- <p>Returns true if the token is valid; otherwise, returns false.</p>
+
+|PARAMETER|TYPE|OPTIONAL|DEFAULT|DESCRIPTION|
+|:---:|:---:|:---:|:---:|:---:|
+|token|string|||<p>The reset token to validate.</p>|
+|user|object|||<p>The user object containing resetPasswordToken and resetPasswordExpires properties.</p>|
+

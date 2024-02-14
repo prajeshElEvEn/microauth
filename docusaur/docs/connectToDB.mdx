@@ -1,0 +1,27 @@
+---
+custom_edit_url: null
+---
+
+```ts
+function connectToDB(mongoURI: string)
+```
+
+<div>
+  <span className="badge badge--success">async</span>
+</div>
+
+<p>Connects to the MongoDB database using the provided URI.</p>
+
+**Returns**: Promise&lt;void&gt;
+- <p>A Promise that resolves when the connection to the database is successful.</p>
+
+|PARAMETER|TYPE|OPTIONAL|DEFAULT|DESCRIPTION|
+|:---:|:---:|:---:|:---:|:---:|
+|mongoURI|string|||<p>The MongoDB connection URI.</p>|
+
+**Throws**: Error
+
+<p>Throws an error if there's an issue connecting to the database.</p>
+
+// Example usage:const mongoURI = "mongodb://localhost:27017/mydatabase";connectToDB(mongoURI);
+

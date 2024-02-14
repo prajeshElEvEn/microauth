@@ -1,0 +1,26 @@
+---
+custom_edit_url: null
+---
+
+```ts
+function sendResetEmail(email: string, resetToken: string)
+```
+
+<div>
+  <span className="badge badge--success">async</span>
+</div>
+
+<p>Sends a password reset email to the provided email address.</p>
+
+**Returns**: Promise&lt;{message: string}&gt;
+- <p>A Promise that resolves with a success message if the email is sent.</p>
+
+|PARAMETER|TYPE|OPTIONAL|DEFAULT|DESCRIPTION|
+|:---:|:---:|:---:|:---:|:---:|
+|email|string|||<p>The email address to which the reset email will be sent.</p>|
+|resetToken|string|||<p>The reset token to include in the email.</p>|
+
+**Throws**: Error
+
+<p>Throws an error if the email could not be sent.</p>
+
