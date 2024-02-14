@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 /**
  * Mongoose User Schema representing user details.
  *
@@ -14,13 +16,6 @@
  * @property {Date} updatedAt - Timestamp representing the last update date.
  */
 
-const mongoose = require("mongoose");
-
-/**
- * Mongoose User Schema.
- *
- * @type {mongoose.Schema<User>}
- */
 const userSchema = new mongoose.Schema(
   {
     firstName: {

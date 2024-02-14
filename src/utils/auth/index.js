@@ -55,7 +55,7 @@ const generateResetToken = () => {
  * @async
  * @param {string} email - The email address to which the reset email will be sent.
  * @param {string} resetToken - The reset token to include in the email.
- * @returns {Promise<{ message: string }>} A Promise that resolves with a success message if the email is sent.
+ * @returns {string} A success message if the email is sent.
  * @throws {Error} Throws an error if the email could not be sent.
  */
 const sendResetEmail = async (email, resetToken) => {

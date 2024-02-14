@@ -20,8 +20,9 @@ const asyncHandler = require("express-async-handler");
  * @returns {void}
  *
  * @example
- * // Example usage in an Express route:
+ * ```
  * app.get('/api/v1/connect', onConnect);
+ * ```
  */
 const onConnect = asyncHandler(async (req, res) => {
   try {

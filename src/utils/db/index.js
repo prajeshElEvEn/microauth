@@ -13,9 +13,10 @@ const { success, error } = require("logggger");
  * @throws {Error} Throws an error if there's an issue connecting to the database.
  *
  * @example
- * // Example usage:
+ * ```
  * const mongoURI = "mongodb://localhost:27017/mydatabase";
  * connectToDB(mongoURI);
+ * ```
  */
 const connectToDB = async (mongoURI) => {
   try {

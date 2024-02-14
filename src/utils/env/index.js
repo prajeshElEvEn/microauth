@@ -10,9 +10,10 @@ const { error } = require("logggger");
  * @throws {Error} Throws an error if an invalid environment is detected.
  *
  * @example
- * // Example usage:
+ * ```
  * const currentEnvironment = loadEnv();
  * console.log(`Current environment: ${currentEnvironment}`);
+ * ```
  */
 const loadEnv = () => {
   dotenv.config({ path: ".env" });

@@ -34,8 +34,9 @@ const {
  * @returns {void}
  *
  * @example
- * // Example usage in an Express route:
+ * ```
  * app.post('/api/v1/auth/register', registerUser);
+ * ```
  */
 const registerUser = asyncHandler(async (req, res) => {
   // Extract data from the request body
@@ -110,8 +111,9 @@ const registerUser = asyncHandler(async (req, res) => {
  * @returns {void}
  *
  * @example
- * // Example usage in an Express route:
+ * ```
  * app.post('/api/v1/auth/login', loginUser);
+ * ```
  */
 const loginUser = asyncHandler(async (req, res) => {
   // Extract data from the request body
@@ -177,8 +179,9 @@ const loginUser = asyncHandler(async (req, res) => {
  * @returns {void}
  *
  * @example
- * // Example usage in an Express route:
+ * ```
  * app.post('/api/v1/auth/reset', resetPassword);
+ * ```
  */
 const resetPassword = asyncHandler(async (req, res) => {
   // Extract data from the request body
@@ -238,8 +241,9 @@ const resetPassword = asyncHandler(async (req, res) => {
  * @returns {void}
  *
  * @example
- * // Example usage in an Express route:
+ * ```
  * app.post('/api/v1/auth/reset/:token', confirmResetPassword);
+ * ```
  */
 const confirmResetPassword = asyncHandler(async (req, res) => {
   // Extract data from request parameters and body

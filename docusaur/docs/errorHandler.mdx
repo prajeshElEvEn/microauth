@@ -21,9 +21,5 @@ function errorHandler(err: Error, req: object, res: object, next: object)
 |res|object|||<p>The Express response object.</p>|
 |next|object|||<p>The Express next function.</p>|
 
-**Throws**: Error
-
-<p>Will throw an error if there's an issue handling the error.</p>
-
-// Usage within an Express routeapp.get('/example', (req, res, next) => {  // Some code that may throw an error  errorHandler(error, req, res, next);});
+```app.get('/example', (req, res, next) => {  // Some code that may throw an error  errorHandler(new Error('Example error'), req, res, next);});```
 

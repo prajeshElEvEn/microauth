@@ -7,14 +7,13 @@
  * @param {object} next - The Express next function.
  * @returns {void}
  *
- * @throws {Error} Will throw an error if there's an issue handling the error.
- *
  * @example
- * // Usage within an Express route
+ * ```
  * app.get('/example', (req, res, next) => {
  *   // Some code that may throw an error
- *   errorHandler(error, req, res, next);
+ *   errorHandler(new Error('Example error'), req, res, next);
  * });
+ * ```
  */
 
 const errorHandler = (err, req, res, next) => {
