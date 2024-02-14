@@ -1,0 +1,27 @@
+---
+custom_edit_url: null
+---
+
+```ts
+function onConnect(req: object, res: object)
+```
+
+<div>
+  <span className="badge badge--success">async</span>
+</div>
+
+<p>Responds with the server's connection status.</p>
+
+**Returns**: void
+
+|PARAMETER|TYPE|OPTIONAL|DEFAULT|DESCRIPTION|
+|:---:|:---:|:---:|:---:|:---:|
+|req|object|||<p>Express request object.</p>|
+|res|object|||<p>Express response object.</p>|
+
+**Throws**: Error
+
+<p>Will throw an error if there's an issue handling the connection status.</p>
+
+// Example usage in an Express route:app.get('/api/v1/connect', onConnect);
+

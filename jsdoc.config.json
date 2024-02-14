@@ -4,7 +4,7 @@
     "exclude": ["node_modules"]
   },
   "opts": {
-    "destination": "./public/docs",
+    "destination": "./docusaur/docs",
     "recurse": true
   },
   "plugins": ["plugins/markdown"],
